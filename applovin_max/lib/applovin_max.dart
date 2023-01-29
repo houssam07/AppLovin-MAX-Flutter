@@ -572,3 +572,26 @@ class AppLovinMAX {
     });
   }
 }
+
+ /// Creates a Native using your [adUnitId] at the specified [AdViewPosition] position.
+  static void createNative(String adUnitId, AdViewPosition position) {
+    channel.invokeMethod('createNative', {
+      'ad_unit_id': adUnitId,
+      });
+  }
+
+ /// Shows the native with the specified [adUnitId].
+ 
+  static void showNative(String adUnitId) {
+    channel.invokeMethod('showNative', {
+      'ad_unit_id': adUnitId,
+    });
+  }
+
+/// Hides the native with the specified [adUnitId].
+  static void hideNative(String adUnitId) {
+    channel.invokeMethod('hideNative', {
+      'ad_unit_id': adUnitId,
+    });
+  }
+
